@@ -1,0 +1,15 @@
+---
+import routes from "@res/routes.json";
+import HeaderItem from "@components/HeaderItem.astro";
+---
+
+<header class="h-[48px] w-full fixed top-0 bg-dirtbrown bg-[url(/bg_top.png)] ">
+    <div class="max-w-[1000px] h-full flex flex-row gap-2 lt-sm:px-2 mx-auto items-center">
+        {routes.map((route: Route) => <HeaderItem name={route.name} href={route.path} /> )}
+        <div class="flex flex-row gap-2 ml-auto">
+            <HeaderItem name="Discord" href="//discord.gg/qTMRVd8EPk" />
+            <div class="text-[14px]"> | </div>
+            <HeaderItem name="GitHub" href="//github.com/GreggCraft" />
+        </div>
+    </div>
+</header>

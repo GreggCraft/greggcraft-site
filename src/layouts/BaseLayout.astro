@@ -1,0 +1,35 @@
+---
+import "@unocss/reset/tailwind.css";
+import getProps from "@res/js/getProps";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+
+const { title, class: className, ogpType, ogpDescription } = getProps(Astro.props);
+const baseTitle = "GreggCraft";
+const usableTitle = title ? `${title} - ${baseTitle}` : baseTitle;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="theme-color" content="#22558e" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:type" content={ogpType ?? "website"} />
+        <meta property="og:title" content={usableTitle} />
+        <meta property="og:description" content={ogpDescription ?? "Welcome to the official GreggCraft website!"} />
+        <meta property="og:image" content="/server.png" />
+        <link rel="icon" type="image/png" href="/server.png" />
+        <title>{usableTitle}</title>
+        <slot name="head" />
+    </head>
+
+    <body class=`h-full h-screen text-normal bg-stonegrey bg-[url(/stone.png)] bg-fixed font-sans text-[13px] ${className}`>
+        <slot name="extras"/> 
+        <Header />
+        <main class="mx-auto pt-16 sm:w-[75%] lt-sm:w-full max-w-[1000px]">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

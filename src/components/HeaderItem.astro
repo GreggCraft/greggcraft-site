@@ -1,0 +1,21 @@
+---
+export interface Props {
+    name: string;
+    href: string;
+}
+
+const { name, href } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const fixedPath =
+    currentPath.length > 1 && currentPath.endsWith("/")
+        ? currentPath.slice(0, -1)
+        : currentPath;
+
+const isExternal = href.startsWith("//");
+---
+
+<a target={isExternal ? "_blank" : "_self"} href={href} class={`flex flex-row gap-2 items-center font-bold sm:text-[16px] ${!isExternal && (fixedPath === href ? "text-header!" : "text-muted!")}`}>
+    {href === "/" && <img class="lt-sm:hidden h-[48px]" height={48} src="/logo.png" />}
+    {name}
+</a>

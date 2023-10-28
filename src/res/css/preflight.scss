@@ -1,0 +1,44 @@
+::selection {
+    background: "theme.colors.selection-bg";
+    color: "theme.colors.selection-fg";
+}
+
+a {
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: #aaf !important;
+}
+
+a:hover {
+    opacity: 75%;
+}
+
+h1 {
+    color: "theme.colors.header";
+    font-size: 24px !important;
+    font-weight: bold !important;
+}
+
+h2 {
+    color: "theme.colors.header";
+    font-size: 18px !important;
+    font-weight: bold !important;
+    margin-top: 2em !important;
+}
+
+h3 {
+    color: "theme.colors.header";
+    font-size: 14px !important;
+    font-weight: bold !important;
+    margin-top: 2em !important;
+}
+
+h4 {
+    color: "theme.colors.header";
+    font-size: 13px !important;
+    font-weight: bold !important;
+    margin-top: 2em !important;
+}
+
+code {
+    font-family: "theme.fontFamily.mono" !important;
+}
