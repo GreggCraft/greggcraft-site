@@ -13,6 +13,8 @@ const fixedPath =
         : currentPath;
 
 const isExternal = href.startsWith("//");
+
+// TODO: There is possibly a bug here in production builds where the currentPath highlighting does not work. Look into this!!
 ---
 
 <a target={isExternal ? "_blank" : "_self"} href={href} class={`flex flex-row gap-2 items-center font-bold sm:text-[16px] ${!isExternal && (fixedPath === href ? "text-header!" : "text-muted!")}`}>

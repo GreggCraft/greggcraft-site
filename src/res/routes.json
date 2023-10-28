@@ -9,7 +9,7 @@
     },
     {
         "name": "Servers",
-        "path": "/routes"
+        "path": "/servers"
     },
     {
         "name": "Blog",
