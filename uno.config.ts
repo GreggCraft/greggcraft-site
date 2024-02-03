@@ -3,6 +3,8 @@ import { presetScrollbar } from "unocss-preset-scrollbar";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 
+import colors from "./colors.json" assert { type: "json" };
+
 export default defineConfig({
     presets: [
         presetUno(),
@@ -33,20 +35,5 @@ export default defineConfig({
             }
         }
     ],
-    theme: {
-        colors: {
-            // Colors
-            stonegrey: "#111",
-            grassgreen: "#71b147",
-            dirtbrown: "#211710",
-            lightbrown: "#593d29",
-            terracottared: "#990c0c",
-
-            // Text
-            header: "#fff",
-            normal: "#E0D0D0",
-            muted: "#b1a5a5",
-            link: "#aaf",
-        }
-    },
+    theme: { colors },
 })

@@ -15,7 +15,6 @@
         "@unocss/astro": "^0.58.4",
         "@unocss/reset": "^0.58.4",
         "astro": "^4.3.2",
-        "astro-icon": "^1.1.0",
         "unocss": "^0.58.4",
         "unocss-preset-scrollbar": "^0.3.0"
     },
