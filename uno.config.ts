@@ -35,19 +35,18 @@ export default defineConfig({
     ],
     theme: {
         colors: {
-            // Background
+            // Colors
             stonegrey: "#111",
+            grassgreen: "#71b147",
             dirtbrown: "#211710",
+            lightbrown: "#593d29",
+            terracottared: "#990c0c",
 
             // Text
             header: "#fff",
             normal: "#E0D0D0",
             muted: "#b1a5a5",
             link: "#aaf",
-
-            // Extras
-            "selection-bg": "#71b147",
-            "selection-fg": "#593d29",
         }
     },
 })

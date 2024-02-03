@@ -1,0 +1,22 @@
+---
+import { queryServer } from "@js/mcstatus";
+import unoConfig from "../../uno.config";
+import ServerCardProperty from "./ServerCardProperty.astro";
+
+export type Props = MinecraftServer;
+const { ip, name, description } = Astro.props;
+const { online, players, version } = await queryServer(Astro.props);
+---
+
+<div class=`bg-stonegrey p-4 border-l-2` style={{ "border-color": online ? unoConfig.theme.colors.grassgreen : unoConfig.theme.colors.terracottared }}>
+    <div class="flex flex-row gap-2 items-center">
+        <ServerCardProperty name="IP Address" value={ip} />
+        {online && (
+            <div class="sm:(border-1)" />
+            <ServerCardProperty name="Online Players" value={`${players?.online}/${players?.max}`} />
+            <ServerCardProperty name="Version" value={`${version.name} (${version.protocol})`} leftMarginAuto />
+        )}
+    </div>
+    <h1>{name}</h1>
+    <p>{description}</p>
+</div>

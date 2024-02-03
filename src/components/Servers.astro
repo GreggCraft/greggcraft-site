@@ -1,0 +1,22 @@
+---
+import Server from "./ServerCard.astro";
+
+const servers: MinecraftServer[] = [
+    {
+        type: "java",
+        name: "GreggCraft: Season 2",
+        description: "The primary Minecraft server, running on PebbleHost.",
+        ip: "greggcraft.uk",
+    },
+    {
+        type: "bedrock",
+        name: "GreggCraft: GreggRock Edition",
+        description: "A Geyser proxy to the primary Minecraft server, allowing Bedrock players to connect.",
+        ip: "greggcraft.uk:25609",
+    },
+];
+---
+
+<div class="flex flex-col gap-2 mb-2">
+    {servers.map((server) => <Server {...server} />)}
+</div>

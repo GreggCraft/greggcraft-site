@@ -1,6 +1,6 @@
 ::selection {
-    background: "theme.colors.selection-bg";
-    color: "theme.colors.selection-fg";
+    background: "theme.colors.grassgreen";
+    color: "theme.colors.dirtlight";
 }
 
 a {
@@ -16,27 +16,28 @@ h1 {
     color: "theme.colors.header";
     font-size: 24px !important;
     font-weight: bold !important;
+    margin-top: 0.125rem;
 }
 
 h2 {
     color: "theme.colors.header";
     font-size: 18px !important;
     font-weight: bold !important;
-    margin-top: 2em !important;
+    margin-top: 0.25rem !important;
 }
 
 h3 {
     color: "theme.colors.header";
     font-size: 14px !important;
     font-weight: bold !important;
-    margin-top: 2em !important;
+    margin-top: 0.5rem !important;
 }
 
 h4 {
     color: "theme.colors.header";
     font-size: 13px !important;
     font-weight: bold !important;
-    margin-top: 2em !important;
+    margin-top: 0.75rem !important;
 }
 
 code {
